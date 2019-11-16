@@ -13,7 +13,26 @@
     .startbtn {
       background-color: blueviolet;
       color: white;
+      align-content: center;
     }
+    
+    button {
+      background-color: teal;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      color: green;
+    }
+
+    h3 {
+      color: red;
+    }
+
   </style>
   <!-- page title -->
   <title>Code Quiz!</title>
@@ -25,18 +44,19 @@
 
     <div class="row">
       <div class="col-xs-12 p-3 d-flex justify-content-around flex-grow-1">
-        <a class="btn btn-info d-flex" href="#" role="button" id="highscores">View Highscores</a>
-        <button type="button d-flex" class="btn btn-success" id="timeremaining">Time remaining: <span class="badge badge-light" id="countdown"></span>
+        <button class="btn btn-info d-flex" href="#" id="highscores">View Highscores</a>
+        <button type="button d-flex" class="btn btn-success">Time remaining: <span class="badge badge-light" id="countdown"></span>
         </button>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12 p-3 d-flex justify-content-around flex-grow-1">
-        <div id="main-content">
-          <h2 id="title">Code Quiz Challenge</h2>
-          <p id="welcome">Welcome to my code quiz! Answer as many questions as you can within the given time. The faster you answer correctly, the more points you get. Good luck...</p>
-          <button class="startbtn" id="startbtn">Start Game</button>
+    <div class="row d-flex justify-content-center">
+      <div class="col-xs-12 p-0 d-flex justify-content-around card text-center">
+        <div class="card-body vw-95" id="main-content">
+          <h2 id="heading">Code Quiz Challenge</h2>
+          <p id="message">Welcome to my code quiz! Answer as many questions as you can within the given time. The faster you answer correctly, the more points you get. Good luck...</p>
+          <button class="btn btn-primary" id="startbtn">Start Game</button>
+          <div class="options" id="listofchoices"></div>
         </div>
       </div>
     </div>
