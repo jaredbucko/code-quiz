@@ -27,6 +27,7 @@
 
     h1 {
       color: green;
+      margin: 0;
     }
 
     h3 {
@@ -44,15 +45,15 @@
 
     <div class="row">
       <div class="col-xs-12 p-3 d-flex justify-content-around flex-grow-1">
-        <button class="btn btn-info d-flex" href="#" id="highscores">View Highscores</a>
-        <button type="button d-flex" class="btn btn-success">Time remaining: <span class="badge badge-light" id="countdown"></span>
+        <button class="btn btn-info d-flex" id="highscores">View Highscores</a>
+        <button type="button d-flex" class="btn btn-success" id="timeLeft">Time remaining: <span class="badge badge-light" id="countdown"></span>
         </button>
       </div>
     </div>
 
     <div class="row d-flex justify-content-center">
-      <div class="col-xs-12 p-0 d-flex justify-content-around card text-center">
-        <div class="card-body vw-95" id="main-content">
+      <div class="col-xs-12 p-0 d-flex justify-content-around text-center">
+        <div class="" id="main-content">
           <h2 id="heading">Code Quiz Challenge</h2>
           <p id="message">Welcome to my code quiz! Answer as many questions as you can within the given time. The faster you answer correctly, the more points you get. Good luck...</p>
           <button class="btn btn-primary" id="startbtn">Start Game</button>
