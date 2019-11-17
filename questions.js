@@ -10,6 +10,9 @@ var totalScore = 0;
 var questionNumber = 0;
 var username = "";
 
+// view highscores
+document.querySelector("#highscoresBtn").addEventListener("click", viewBoard);
+
 
 // questions array
 var questions = [
@@ -126,7 +129,7 @@ function updateBoard() {
   heading.textContent="Highscores";
   document.getElementById("listofchoices").remove();
   localStorage.setItem("initials", highscores.innerHTML);
-  
+
 }
 
 // end game
@@ -143,6 +146,23 @@ function endGame() {
   submit.setAttribute("id", "submitBtn");
   submit.addEventListener("click", updateBoard);
   listofchoices.appendChild(submit);
+}
+
+function viewBoard() {
+  event.preventDefault();
+  countdown.remove();
+  startbtn.remove();
+  heading.textContent="Highscores";
+  message.textContent="";
+  var highscores = message;
+  var saved = localStorage.getItem("highscores");
+  if (saved) {
+    highscores.innerHTML = saved;
+  }
+  highscores.innerHTML += "<li>" + initials.value + " --- " + totalScore + "</li>";
+  document.getElementById("listofchoices").remove();
+  localStorage.setItem("initials", highscores.innerHTML);
+  
 }
 
 
