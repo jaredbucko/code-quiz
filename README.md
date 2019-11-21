@@ -7,5 +7,5 @@ This project utilizes Javascript to interact with the HTML DOM to dynamically up
 # Deployed URL
 https://jaredbucko.github.io/code-quiz/index.html
 
-# Known Bugs
+### Known Bugs
 Highscores do not sort in descending order, clicking "View Highscores" button does not remove enter initials prompt
